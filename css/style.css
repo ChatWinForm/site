@@ -1,1 +1,64 @@
+/*стили для страницы контакты*/
 
+body{
+	background-image: url('../img/bg.svg');
+	background-size: cover;
+
+}
+
+
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+}
+
+
+.subform {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	text-align: center;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    max-width: 100%;
+    min-width: 340px;
+    /*border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)*/
+}
+
+.left-side {
+
+width: 400px;
+height: 250px ;
+margin: 5px;
+text-align: center;
+display:inline-block;
+
+}
+.right-side {
+
+width: 400px;
+height: 250px ;
+margin: 5px;
+text-align: center;
+display:inline-block;
+
+}
+
+.subform input[type="submit"]{
+
+	padding:8px 60px;
+	font-size: 1em;
+	color:white;
+	background-color: #B580BE;
+	color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 4px white;
+
+}
