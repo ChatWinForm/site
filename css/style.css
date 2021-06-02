@@ -1,70 +1,149 @@
-/*стили для страницы контакты*/
-
-body{
-	background-image: url('../img/bg.svg');
-	background-size: cover;
-
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFE9DA;
+  width: 76%;
+  padding: 5%;
+}
+.main div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+}
+#nickname{
+  color: #483434;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.35em;
+}
+#description{
+  text-align: center;
+  color: #5E4A48;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.175em;
+}
+.links a{
+  margin-top: 10%;
+  border: 1px solid #933B00;
+  padding: 5% 0% 5% 0%;
+  width: 70%;
+  border-radius: 46px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+.links a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+.links {
+  width: 100%;
+  margin-bottom: 10%;
+  color: #933B00;
+}
+#avatar{
+  border-radius: 100px;
+  width: 100%;
+}
+#avatardiv{
+  width: 50%;
+  padding-bottom: 5%;
+}
+@media (max-width: 550px) {
+  .background {
+    width: 76%;
+    padding: 5%;
+  }
+  .main {
+    margin-top: 10%;
+  }
+  .links {
+    width: 100%;
+    margin-bottom: 10%;
+    color: #933B00;
+  }
+  #avatardiv{
+    width: 50%;
+    padding-bottom: 5%;
+  }
+}
+@media (min-width:550px) and (max-width: 900px) {
+  .main {
+    margin-top: 10%;
+  }
+  #nickname{
+    font-size: 1.7em;
+  }
+  #description{
+    font-size: 1.3em;
+    text-align: center;
+  }
+  .links a{
+    font-size: 1.4em;
+    width: 85%;
+    position: relative;
+  }
+  #avatardiv{
+    width: 40%;
+    padding-bottom: 5%;
+  }
 }
 
-
-
-img.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    height: auto;
+@media (min-width:900px) and (max-width: 1400px){
+  .background {
+    width: 50%;
+    padding: 5%;
+  }
+  .main {
+    margin-top: 10%;
+  }
+  #nickname{
+    font-size: 1.7em;
+  }
+  #description{
+    font-size: 1.3em;
+  }
+  .links a{
+    font-size: 1.3em;
+    width: 85%;
+  }
+  #avatardiv{
+    width: 30%;
+    padding-bottom: 5%;
+  }
 }
-
-
-.subform {
-	display: flex;
-	flex-direction: row;
-	flex-flow: row wrap;
-	text-align: center;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    max-width: 100%;
-    min-width: 340px;
-    /*border-radius: 8px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)*/
-}
-
-.left-side {
-
-width: 400px;
-height: 250px ;
-margin: 5px;
-text-align: center;
-display:inline-block;
-
-}
-.right-side {
-
-width: 400px;
-height: 250px ;
-margin: 5px;
-text-align: center;
-display:inline-block;
-
-}
-
-.subform input[type="submit"]{
-
-	padding:8px 60px;
-	font-size: 1em;
-	color:white;
-	background-color: #B580BE;
-	color: #FFFFFF;
-    border-radius: 5px;
-    box-shadow: 0 0 4px white;
-
-}
-
-.subform textarea {
-	resize: none;
-	width: 49%; 
-    height: 140px;
+@media (min-width:1400px){
+  .main {
+    margin-top: 2%;
+  }
+  .background {
+    width: 20%;
+    padding: 2%;
+  }
+  #nickname{
+    font-size: 42px;
+  }
+  #description{
+    text-align: center;
+    font-size: 27px;
+  }
+  .links a{
+    font-size: 31px;
+    margin-top: 4%;
+    width: 85%;
+  }
+  #avatardiv{
+    width: 7%;
+    padding-bottom: 2%;
+  }
 }
