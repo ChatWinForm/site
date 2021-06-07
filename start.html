@@ -5,33 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style_start.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
         <img class="displayed" src="img/contact.svg" alt="" align="center">
-            <form class="subform"  method="post" action="result.html">
+            <form class="subform" action="#">
                 <div class="left-side">
                    <h2>Данные</h2>
                    <p>
-                   <input name="name" placeholder="Ваше имя/ник"></p>
+                   <input id="name" placeholder="Ваше имя/ник"></p>
                    <p>
-                   <textarea name="comments" cols="23" rows="7" placeholder="Расскажите о себе..." ></textarea></p>
-                   <p><input type="file" name="photo" accept="image/*,image/jpeg" title="Добавьте свое фото">
-                   
+                   <textarea id="comments" cols="23"  placeholder="Расскажите о себе..." maxlength="50"></textarea></p>
+                   <h4>Добавьте свое фото</h4>
+                   <p><input type="file" id="photo" accept="image/jpeg,image/png" title="Добавьте свое фото">
+
                 </div>
                 <div class="right-side">
                     <h2>Ссылки на Ваши соцсети</h2>
                     <p>
-                    <input name="instagram" placeholder="Instagram" id="instagram"></p>
+                    <input id="instagram" placeholder="Instagram" id="instagram"></p>
                     <p>
-                    <input name="vk" placeholder="Vk"></p>
+                    <input id="facebook" placeholder="Facebook"></p>
                     <p>
-                    <input name="telegram" placeholder="Telegram" id="telegram"></p>
                     <p>
-                    <input name="youtube" placeholder="Youtube"></p>
+                    <input id="twitter" placeholder="Twitter"></p>
                     <p>
-                    <input type="submit" value="Готово"></p>
+                    <input id="telegram" placeholder="Telegram" id="telegram"></p>
+                    <p>
+                    <input id="github" placeholder="Github"></p>
+                    <p>
+                    <p>
+                    <input type="tel" id="viber" placeholder="Viber"></p>
+                    <p>
+                    <p>
+                    <input id="youtube" placeholder="Youtube"></p>
+                    <p>
+                    <input type="reset" value="Очистить">
+                    <button id="main">Назад</button>
+                    </p>
+                    <p><input id="create_card" type="submit" value="Готово"></p>
+
                 </div>
 </form>
 
