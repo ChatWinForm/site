@@ -37,6 +37,7 @@ img.displayed {
     min-height: 30px;
     border: 1px solid grey;
     width: 250px;
+		
 }
 
 .left-side {
@@ -45,6 +46,7 @@ img.displayed {
 	text-align: center;
 	display:inline-block;
 	vertical-align: top;
+
 
 }
 
@@ -63,8 +65,7 @@ img.displayed {
 	font-size: 1em;
 	color:white;
 	background-color: #B580BE;
-    border-radius: 5px;
-    box-shadow: 0 0 4px white;
+    border-radius: 30px;
     width: 40%;
 
 }
@@ -76,10 +77,8 @@ img.displayed {
 	font-size: 1em;
 	color:white;
 	background-color: #00A287;
-    border-radius: 5px;
-    box-shadow: 0 0 4px white;
+    border-radius: 30px;
     width: 100%;
-
 }
 
 .subform textarea {
