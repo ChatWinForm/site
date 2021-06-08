@@ -1,6 +1,6 @@
 /*стили для страницы контакты*/
 
-body{
+#contact_page{
 	background-image: url('../img/bg.svg');
 	background-size: cover;
 
@@ -31,7 +31,7 @@ img.displayed {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)*/
 }
 
- .subform input, textarea{
+ .subform input, .subform textarea{
 
     background: transparent;
     min-height: 30px;
@@ -56,7 +56,7 @@ img.displayed {
 
 }
 
-.subform input[type="reset"], button{
+.subform input[type="reset"], .subform button{
 
 	padding:8px 10px;
 	margin: 2px	;
