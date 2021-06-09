@@ -1,166 +1,193 @@
 #navigation_tmpl1 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
-#navigation_tmpl1 button{
-  margin-top: 20px;
-  width: 15%;
-  height: 40px  ;
-  border-radius: 30px;
-  border-style: none;
+
+#navigation_tmpl1 button {
+    margin-top: 20px;
+    width: 15%;
+    height: 40px;
+    border-radius: 30px;
+    border-style: none;
 }
+
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .background {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #FFE9DA;
-  width: 76%;
-  padding: 5%;
-}
-.main div{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 7px;
-}
-#nickname{
-  color: #483434;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 1.35em;
-}
-#description{
-  text-align: center;
-  color: #5E4A48;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.175em;
-}
-#links a{
-  margin-top: 10%;
-  border: 1px solid #933B00;
-  padding: 5% 0% 5% 0%;
-  width: 70%;
-  border-radius: 46px;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-}
-#links a:hover{
-  text-decoration: none;
-  color: inherit;
-}
-#links {
-  width: 100%;
-  margin-bottom: 10%;
-  color: #933B00;
-}
-#avatar{
-  border-radius: 100px;
-  width: 100%;
-}
-#avatardiv{
-  width: 50%;
-  padding-bottom: 5%;
-}
-@media (max-width: 550px) {
-  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFE9DA;
     width: 76%;
     padding: 5%;
-  }
-  .main {
-    margin-top: 10%;
-  }
+}
 
-#links  {
+.main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+}
+
+#nickname {
+    color: #483434;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.35em;
+}
+
+#description {
+    text-align: center;
+    color: #5E4A48;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.175em;
+}
+
+#links a {
+    margin-top: 10%;
+    border: 1px solid #933B00;
+    padding: 5% 0% 5% 0%;
+    width: 70%;
+    border-radius: 46px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+#links a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+#links {
     width: 100%;
     margin-bottom: 10%;
     color: #933B00;
-  }
-  #avatardiv{
+}
+
+#avatar {
+    border-radius: 100px;
+    width: 100%;
+}
+
+#avatardiv {
     width: 50%;
     padding-bottom: 5%;
-  }
-}
-@media (min-width:550px) and (max-width: 900px) {
-  .main {
-    margin-top: 10%;
-  }
-  #nickname{
-    font-size: 1.7em;
-  }
-  #description{
-    font-size: 1.3em;
-    text-align: center;
-  }
-
-#links  a{
-    font-size: 1.4em;
-    width: 85%;
-    position: relative;
-  }
-  #avatardiv{
-    width: 40%;
-    padding-bottom: 5%;
-  }
 }
 
-@media (min-width:900px) and (max-width: 1400px){
-  .background {
-    width: 50%;
-    padding: 5%;
-  }
-  .main {
-    margin-top: 10%;
-  }
-  #nickname{
-    font-size: 1.7em;
-  }
-  #description{
-    font-size: 1.3em;
-  }
+@media (max-width: 550px) {
+    .background {
+        width: 76%;
+        padding: 5%;
+    }
 
-#links  a{
-    font-size: 1.3em;
-    width: 85%;
-  }
-  #avatardiv{
-    width: 30%;
-    padding-bottom: 5%;
-  }
+    .main {
+        margin-top: 10%;
+    }
+
+    #links {
+        width: 100%;
+        margin-bottom: 10%;
+        color: #933B00;
+    }
+
+    #avatardiv {
+        width: 50%;
+        padding-bottom: 5%;
+    }
 }
-@media (min-width:1400px){
-  .main {
-    margin-top: 2%;
-  }
-  .background {
-    width: 20%;
-    padding: 2%;
-  }
-  #nickname{
-    font-size: 42px;
-  }
-  #description{
-    text-align: center;
-    font-size: 27px;
-  }
 
-#links  a{
-    font-size: 31px;
-    margin-top: 4%;
-    width: 85%;
-  }
-  #avatardiv{
-    width: 7%;
-    padding-bottom: 2%;
-  }
+@media (min-width: 550px) and (max-width: 900px) {
+    .main {
+        margin-top: 10%;
+    }
+
+    #nickname {
+        font-size: 1.7em;
+    }
+
+    #description {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    #links a {
+        font-size: 1.4em;
+        width: 85%;
+        position: relative;
+    }
+
+    #avatardiv {
+        width: 40%;
+        padding-bottom: 5%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1400px) {
+    .background {
+        width: 50%;
+        padding: 5%;
+    }
+
+    .main {
+        margin-top: 10%;
+    }
+
+    #nickname {
+        font-size: 1.7em;
+    }
+
+    #description {
+        font-size: 1.3em;
+    }
+
+    #links a {
+        font-size: 1.3em;
+        width: 85%;
+    }
+
+    #avatardiv {
+        width: 30%;
+        padding-bottom: 5%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .main {
+        margin-top: 2%;
+    }
+
+    .background {
+        width: 20%;
+        padding: 2%;
+    }
+
+    #nickname {
+        font-size: 42px;
+    }
+
+    #description {
+        text-align: center;
+        font-size: 27px;
+    }
+
+    #links a {
+        font-size: 31px;
+        margin-top: 4%;
+        width: 85%;
+    }
+
+    #avatardiv {
+        width: 7%;
+        padding-bottom: 2%;
+    }
 }

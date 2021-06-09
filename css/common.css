@@ -1,0 +1,9 @@
+body {
+    background-image: url('../img/bg.svg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hide {
+    display: none;
+}

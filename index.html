@@ -1,43 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Multicard</title>
-  <link href="css/startPage.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Генератор визиток</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/startPage.css">
+    <link rel="stylesheet" href="css/style_start.css">
+    <link rel="stylesheet" href="css/style_template1.css">
 </head>
 <body>
-<div class="main_page">
-  <section class="promo">
-    <div class="container">
-      <div class="tagline">hello
-      </div>
-      <div class = "taglineTxt" >
-      <h2>Мы поможем тебе с созданием персонального сайта-мультиссылки всего за пару кликов!</h2>
-      </div>
-      <button class="promoBtn">СОЗДАТЬ СВОЙ ДИЗАЙН</button>
-    
-      <div class="waitingWrapper">
-      <div class="waitingItem">
-        <img src="img/startPageImg/Vector.png" alt="vector" class="waitingImg">
-        <div class="waitingDescr">Вы сможете разместить все ваши контакты на одной странице</div>
-      </div>
-      <div class="waitingItem">
-        <img src="img/startPageImg/stopwatch.png" alt="stopwatch" class="waitingImg">
-        <div class="waitingDescr">С помощью нашего сайта вы создадите мультиссылку за пару минут!</div>
-      </div>
-      <div class="waitingItem">
-        <img src="img/startPageImg/smartphone.png" alt="smartphone" class="waitingImg">
-        <div class="waitingDescr">Умные ссылки дают возможность вашим клиентам связаться с вами за один клик</div>
-      </div>
-    </div>
-    
-    </div>
-  </section>
 
-
+<div id="main_page">
+    <div class="promo">
+        <div class="container">
+            <div class="tagline">hello
+            </div>
+            <div class="taglineTxt">
+                <h2>Мы поможем тебе с созданием персонального сайта-мультиссылки всего за пару кликов!</h2>
+            </div>
+            <button class="promoBtn show_contact_page">СОЗДАТЬ СВОЙ ДИЗАЙН</button>
+            <div class="waitingWrapper">
+                <div class="waitingItem">
+                    <img src="img/startPageImg/Vector.png" alt="vector" class="waitingImg">
+                    <div class="waitingDescr">Вы сможете разместить все ваши контакты на одной странице</div>
+                </div>
+                <div class="waitingItem">
+                    <img src="img/startPageImg/stopwatch.png" alt="stopwatch" class="waitingImg">
+                    <div class="waitingDescr">С помощью нашего сайта вы создадите мультиссылку за пару минут!</div>
+                </div>
+                <div class="waitingItem">
+                    <img src="img/startPageImg/smartphone.png" alt="smartphone" class="waitingImg">
+                    <div class="waitingDescr">Умные ссылки дают возможность вашим клиентам связаться с вами за один
+                        клик
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div id="contact_page" class="hide">
+    <img class="displayed" src="img/contact.svg" alt="" align="center">
+    <form class="subform" action="#">
+        <div class="left-side">
+            <h2>Данные</h2>
+            <p>
+                <input id="name" placeholder="Ваше имя/ник"></p>
+            <p>
+                <textarea id="comments" cols="23" placeholder="Расскажите о себе..." maxlength="50"></textarea></p>
+            <h4>Добавьте свое фото</h4>
+            <p><input type="file" id="photo" accept="image/jpeg,image/png" title="Добавьте свое фото">
+        </div>
+        <div class="right-side">
+            <h2>Ссылки на Ваши соцсети</h2>
+            <p>
+                <input id="instagram" placeholder="Instagram" id="instagram"></p>
+            <p>
+                <input id="facebook" placeholder="Facebook"></p>
+            <p>
+            <p>
+                <input id="twitter" placeholder="Twitter"></p>
+            <p>
+                <input id="telegram" placeholder="Telegram" id="telegram"></p>
+            <p>
+                <input id="github" placeholder="Github"></p>
+            <p>
+            <p>
+                <input type="tel" id="viber" placeholder="Viber"></p>
+            <p>
+            <p>
+                <input id="youtube" placeholder="Youtube"></p>
+            <p>
+                <input type="reset" value="Очистить">
+                <button id="show_main_page">Назад</button>
+            </p>
+            <p><input id="create_card" type="submit" value="Готово"></p>
+        </div>
+    </form>
+</div>
+
+<div id="preview" class="hide">
+    <div id="navigation_tmpl1">
+        <button type="button" class="show_contact_page">back to contact</button>
+        <button type="button" id="download">download</button>
+    </div>
+    <div class="main" id="card">
+        <div id="avatardiv">
+            <img src="ava.jpg" alt="" id="avatar">
+        </div>
+        <div class="background">
+            <div id="nickname">
+                Lorem ipsum dolor
+                <div id="description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    <div id="links">
+                        <a href="#">
+                            <div id="link1">
+                                github
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div id="link2">
+                                youtube
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div id="link3">
+                                instagram
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div id="link4">
+                                linkedin
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div id="link5">
+                                twitter
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>
+

@@ -1,12 +1,3 @@
-/*стили для страницы контакты*/
-
-#contact_page{
-	background-image: url('../img/bg.svg');
-	background-size: cover;
-
-}
-
-
 img.displayed {
     display: block;
     margin-left: auto;
@@ -16,78 +7,66 @@ img.displayed {
 }
 
 .subform {
-
-	 flex-direction: row;
-	 flex-flow: row wrap;
-	 text-align: center;
-	 display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    text-align: center;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     width: 800px;
     max-width: 100%;
     min-width: 360px;
     justify-content: space-around;
-    /*border-radius: 8px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)*/
 }
 
- .subform input, .subform textarea{
-
+.subform input, .subform textarea {
     background: transparent;
     min-height: 30px;
     border: 1px solid grey;
     width: 250px;
-		
+
 }
 
 .left-side {
-
-   margin-left: 20px;
-	text-align: center;
-	display:inline-block;
-	vertical-align: top;
-
-
+    margin-left: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .right-side {
-   margin-right: 20px;
-   margin-left: 20px;
-	text-align: center;
-	display:inline-block;
-
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+    display: inline-block;
 }
 
-.subform input[type="reset"], .subform button{
-
-	padding:8px 10px;
-	margin: 2px	;
-	font-size: 1em;
-	color:white;
-	background-color: #B580BE;
+.subform input[type="reset"], .subform button {
+    padding: 8px 10px;
+    margin: 2px;
+    font-size: 1em;
+    color: white;
+    background-color: #B580BE;
     border-radius: 30px;
     width: 40%;
-
 }
 
-.subform input[type="submit"]{
-
-	padding:8px 10px;
-	margin: 2px	;
-	font-size: 1em;
-	color:white;
-	background-color: #00A287;
+.subform input[type="submit"] {
+    padding: 8px 10px;
+    margin: 2px;
+    font-size: 1em;
+    color: white;
+    background-color: #00A287;
     border-radius: 30px;
     width: 100%;
 }
 
 .subform textarea {
-	resize: none;
-	width: 250px;
-	height: 80px;
-
+    resize: none;
+    width: 250px;
+    height: 80px;
 }
 
-.subform input[type="file"]{
-	border: none;
+.subform input[type="file"] {
+    border: none;
 }
