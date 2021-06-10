@@ -77,3 +77,9 @@ padding-left: 22px;
 #create_card{
   padding-left: 15px;
 }
+@media (min-width: 320px) and (max-width: 1400px) {
+  img.displayed {
+
+      margin-top: 20px;
+  }
+  }
