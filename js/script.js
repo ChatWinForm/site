@@ -18,7 +18,7 @@ const Download = document.getElementById('download');
 // inputs
 const Photo = document.getElementById('photo');
 const Name = document.getElementById('name');
-const Comments = document.getElementById('comments');
+const Status = document.getElementById('comments');
 const Instagram = document.getElementById('instagram');
 const Facebook = document.getElementById('facebook');
 const Twitter = document.getElementById('twitter');
@@ -28,7 +28,118 @@ const Viber = document.getElementById('viber');
 const Youtube = document.getElementById('youtube');
 
 
+// containers
+const PhotoContainer = document.getElementById('photo_container');
+const NameContainer = document.getElementById('name_container');
+const StatusContainer = document.getElementById('status_container');
+const LinksContainer = document.getElementById('links');
+
+
 // functions
+const checkFile = (file) => {
+    if (!file)
+        return null; // файл не выбран
+    let index_type = file.name.lastIndexOf('.') + 1;
+    let type = file.name.substr(index_type);
+    if ('jpeg' !== type && 'jpg' !== type && 'png' !== type)
+        return null; // неверный тип файла
+    if (MaxImageSize * 1024 * 1024 < file.size)
+        return null; // превышен размер файла
+
+    return file.name;
+};
+
+const createAvatar = (file) => {
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    let img = document.createElement('img');
+    img.id = 'avatar';
+    reader.onloadend = function () {
+        img.src = reader.result;
+    }
+    let div = document.createElement('div');
+    div.id = 'avatardiv';
+    div.append(img);
+
+    return div;
+};
+
+const createLink = (type, name) => {
+    let resultLink = '';
+    switch (type) {
+        case 'instagram':
+            resultLink = 'https://www.instagram.com/' + name;
+            break;
+        case 'facebook':
+            resultLink = 'https://www.facebook.com/profile.php?id=' + name;
+            break;
+        case 'twitter':
+            resultLink = 'https://twitter.com/' + name;
+            break;
+        case 'telegram':
+            resultLink = 'https://telegram.me/' + name;
+            break;
+        case 'github':
+            resultLink = 'https://github.com/' + name;
+            break;
+        case 'viber':
+            resultLink = 'viber://chat?number=' + name;
+            break;
+        case 'youtube':
+            resultLink = name;
+            break;
+    }
+
+    return resultLink;
+}
+
+const createLinkContainer = (type, name) => {
+    const span = document.createElement('span');
+    span.innerText = type;
+    const div = document.createElement('div');
+    div.append(span);
+    const a = document.createElement('a');
+    a.href = createLink(type, name);
+    a.append(div);
+
+    return a;
+};
+
+const fillPreviewPage = (e) => {
+    e.preventDefault();
+
+    if (checkFile(Photo.files[0])) {
+        let photo = document.getElementById('avatardiv');
+        if (photo)
+            PhotoContainer.removeChild(photo);
+        PhotoContainer.prepend(createAvatar(Photo.files[0]));
+    }
+
+    NameContainer.innerText = Name.value;
+    StatusContainer.innerText = Status.value;
+
+    while (LinksContainer.firstElementChild)
+        LinksContainer.removeChild(LinksContainer.firstElementChild);
+
+    if (Instagram.value)
+        LinksContainer.prepend(createLinkContainer(Instagram.id, Instagram.value));
+    if (Facebook.value)
+        LinksContainer.prepend(createLinkContainer(Facebook.id, Facebook.value));
+    if (Twitter.value)
+        LinksContainer.prepend(createLinkContainer(Twitter.id, Twitter.value));
+    if (Telegram.value)
+        LinksContainer.prepend(createLinkContainer(Telegram.id, Telegram.value));
+    if (Github.value)
+        LinksContainer.prepend(createLinkContainer(Github.id, Github.value));
+    if (Viber.value)
+        LinksContainer.prepend(createLinkContainer(Viber.id, Viber.value));
+    if (Youtube.value)
+        LinksContainer.prepend(createLinkContainer(Youtube.id, Youtube.value));
+
+};
+
+
+// listeners
 const showMainPage = () => {
     ContactPage.classList.add('hide');
     PreviewPage.classList.add('hide');
@@ -39,7 +150,7 @@ const showContactPage = () => {
     MainPage.classList.add('hide');
     PreviewPage.classList.add('hide');
     ContactPage.classList.remove('hide');
-}
+};
 
 const showPreviewPage = (e) => {
     fillPreviewPage(e);
@@ -48,23 +159,9 @@ const showPreviewPage = (e) => {
     PreviewPage.classList.remove('hide');
 };
 
-const checkFile = (file) => {
-    if (!file)
-        return null; // файл не выбран
-
-    let index_type = file.name.lastIndexOf('.') + 1;
-    let type = file.name.substr(index_type);
-    if ('jpeg' !== type && 'jpg' !== type && 'png' !== type)
-        return null; // неверный тип файла
-
-    if (MaxImageSize * 1024 * 1024 < file.size)
-        return null; // превышен размер файла
-
-    return file.name;
-};
-
-const fillPreviewPage = (e) => {
-    e.preventDefault();
+const checkFileAfterChange = (e) => {
+    if (!checkFile(Photo.files[0]))
+        e.target.value = '';
 };
 
 
@@ -80,4 +177,7 @@ for (let showContact of ShowContact) {
 
 // переход на предварительный просмотр
 ShowCard.addEventListener('click', showPreviewPage);
+
+// выбор фото пользователем
+Photo.addEventListener('change', checkFileAfterChange);
 
