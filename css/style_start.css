@@ -47,8 +47,8 @@ img.displayed {
     font-size: 1em;
     color: white;
     background-color: #B580BE;
-    border-radius: 30px;
-    width: 40%;
+    border-radius: 5px;
+    width: 45%;
 }
 
 .subform input[type="submit"] {
@@ -57,7 +57,7 @@ img.displayed {
     font-size: 1em;
     color: white;
     background-color: #00A287;
-    border-radius: 30px;
+    border-radius: 5px;
     width: 100%;
 }
 
@@ -69,4 +69,10 @@ img.displayed {
 
 .subform input[type="file"] {
     border: none;
+}
+.button-center{
+padding-left: 22px;
+}
+#create_card{
+  padding-left: 15px;
 }
