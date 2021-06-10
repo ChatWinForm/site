@@ -28,6 +28,7 @@
     text-align: center;
 }
 .promoBtn {
+    margin-top: 50px;
     margin: 50px;
     width: 269px; /* ширина высота кнопки */
     height: 61px;
