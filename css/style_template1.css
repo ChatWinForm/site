@@ -1,8 +1,7 @@
 #navigation_tmpl1 {
     display: flex;
-    flex-direction: column;
     width: 100%;
-    align-items: center;
+    justify-content: center;
 }
 
 #navigation_tmpl1 button {
@@ -11,6 +10,11 @@
     height: 40px;
     border-radius: 30px;
     border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#navigation_tmpl1 img{
+  width: 15%;
 }
 
 .main {
@@ -56,7 +60,7 @@
     margin-top: 10%;
     border: 1px solid #933B00;
     padding: 5% 0% 5% 0%;
-    width: 70%;
+    width: 200%;
     border-radius: 46px;
     text-decoration: none;
     color: inherit;
@@ -69,7 +73,7 @@
 }
 
 #links {
-    width: 100%;
+    width: 200%;
     margin-bottom: 10%;
     color: #933B00;
 }
@@ -85,6 +89,9 @@
 }
 
 @media (max-width: 550px) {
+    #navigation_tmpl1 img{
+      width: 70%;
+    }
     .background {
         width: 76%;
         padding: 5%;
@@ -101,12 +108,15 @@
     }
 
     #avatardiv {
-        width: 50%;
+        width: 80%;
         padding-bottom: 5%;
     }
 }
 
 @media (min-width: 550px) and (max-width: 900px) {
+    #navigation_tmpl1 img{
+      width: 70%;
+    }
     .main {
         margin-top: 10%;
     }
@@ -127,12 +137,15 @@
     }
 
     #avatardiv {
-        width: 40%;
+        width: 75%;
         padding-bottom: 5%;
     }
 }
 
 @media (min-width: 900px) and (max-width: 1400px) {
+  #navigation_tmpl1 img{
+    width: 70%;
+  }
     .background {
         width: 50%;
         padding: 5%;
@@ -156,7 +169,7 @@
     }
 
     #avatardiv {
-        width: 30%;
+        width: 100%;
         padding-bottom: 5%;
     }
 }
@@ -187,7 +200,7 @@
     }
 
     #avatardiv {
-        width: 7%;
+        width: 60%;
         padding-bottom: 2%;
     }
 }
