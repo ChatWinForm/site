@@ -164,6 +164,25 @@ const checkFileAfterChange = (e) => {
         e.target.value = '';
 };
 
+const changePhotoPath = (path) => {
+    if (checkFile(Photo.files[0])) {
+        let indF = path.indexOf('src=\"');
+        let indE = path.indexOf('\"', indF + 5);
+        let substr = path.slice(indF + 5, indE);
+        return path.replace(substr, Photo.files[0].name);
+    }
+    return path;
+};
+
+const downloadFile = () => {
+    let type = 'data:application/octet-stream;base64, ';
+    let style = '<style>\n' + document.querySelector('style').innerHTML + '\n</style>\n';
+    let html = document.getElementById('card').innerHTML;
+    html = "<div class=\"main\">" + changePhotoPath(html) + "</div>";
+    let text = btoa(style + html);
+    Download.href = type + text;
+};
+
 
 // creating event
 
@@ -181,3 +200,4 @@ ShowCard.addEventListener('click', showPreviewPage);
 // выбор фото пользователем
 Photo.addEventListener('change', checkFileAfterChange);
 
+Download.addEventListener('click', downloadFile);
