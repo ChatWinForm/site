@@ -9,38 +9,234 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/startPage.css">
     <link rel="stylesheet" href="css/style_start.css">
-    <link rel="stylesheet" href="css/style_template1.css">
+    <!--    <link rel="stylesheet" href="css/style_template1.css">-->
 </head>
 <body>
 
-  <div id="main_page">
-      <div class="promo">
-          <div class="container">
-              <img src="img/hello.svg" alt="hello" class="tagline">
-              <div class="taglineTxt">
-                  <h2>Мы поможем тебе с созданием персонального сайта-мультиссылки всего за пару кликов!</h2>
-              </div>
-              <button class="promoBtn show_contact_page">СОЗДАТЬ СВОЙ ДИЗАЙН</button>
-              <div class="waitingWrapper">
-                  <div class="waitingItem">
-                      <img src="img/startPageImg/Vector.png" alt="vector" class="waitingImg">
-                      <div class="waitingDescr">Вы сможете разместить все ваши контакты на одной странице</div>
-                  </div>
-                  <div class="vl"></div>
-                  <div class="waitingItem">
-                      <img src="img/startPageImg/stopwatch.png" alt="stopwatch" class="waitingImg">
-                      <div class="waitingDescr">С помощью нашего сайта вы создадите мультиссылку за пару минут!</div>
-                  </div>
-                  <div class="vl"></div>
-                  <div class="waitingItem">
-                      <img src="img/startPageImg/smartphone.png" alt="smartphone" class="waitingImg">
-                      <div class="waitingDescr">Умные ссылки дают возможность вашим клиентам связаться с вами за один
-                          клик
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+<style>
+    #navigation_tmpl1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #navigation_tmpl1 button {
+        margin-top: 20px;
+        width: 15%;
+        height: 40px;
+        border-radius: 30px;
+        border-style: none;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #FFE9DA;
+        width: 76%;
+        padding: 5%;
+    }
+
+    .main div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 7px;
+    }
+
+    #nickname {
+        color: #483434;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.35em;
+    }
+
+    #description {
+        text-align: center;
+        color: #5E4A48;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.175em;
+    }
+
+    #links a {
+        margin-top: 10%;
+        border: 1px solid #933B00;
+        padding: 5% 0% 5% 0%;
+        width: 70%;
+        border-radius: 46px;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+    }
+
+    #links a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    #links {
+        width: 100%;
+        margin-bottom: 10%;
+        color: #933B00;
+    }
+
+    #avatar {
+        border-radius: 100px;
+        width: 100%;
+    }
+
+    #avatardiv {
+        width: 50%;
+        padding-bottom: 5%;
+    }
+
+    @media (max-width: 550px) {
+        .background {
+            width: 76%;
+            padding: 5%;
+        }
+
+        .main {
+            margin-top: 10%;
+        }
+
+        #links {
+            width: 100%;
+            margin-bottom: 10%;
+            color: #933B00;
+        }
+
+        #avatardiv {
+            width: 50%;
+            padding-bottom: 5%;
+        }
+    }
+
+    @media (min-width: 550px) and (max-width: 900px) {
+        .main {
+            margin-top: 10%;
+        }
+
+        #nickname {
+            font-size: 1.7em;
+        }
+
+        #description {
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        #links a {
+            font-size: 1.4em;
+            width: 85%;
+            position: relative;
+        }
+
+        #avatardiv {
+            width: 40%;
+            padding-bottom: 5%;
+        }
+    }
+
+    @media (min-width: 900px) and (max-width: 1400px) {
+        .background {
+            width: 50%;
+            padding: 5%;
+        }
+
+        .main {
+            margin-top: 10%;
+        }
+
+        #nickname {
+            font-size: 1.7em;
+        }
+
+        #description {
+            font-size: 1.3em;
+        }
+
+        #links a {
+            font-size: 1.3em;
+            width: 85%;
+        }
+
+        #avatardiv {
+            width: 30%;
+            padding-bottom: 5%;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .main {
+            margin-top: 2%;
+        }
+
+        .background {
+            width: 20%;
+            padding: 2%;
+        }
+
+        #nickname {
+            font-size: 42px;
+        }
+
+        #description {
+            text-align: center;
+            font-size: 27px;
+        }
+
+        #links a {
+            font-size: 31px;
+            margin-top: 4%;
+            width: 85%;
+        }
+
+        #avatardiv {
+            width: 7%;
+            padding-bottom: 2%;
+        }
+    }
+</style>
+
+<div id="main_page">
+    <div class="promo">
+        <div class="container">
+            <img src="img/hello.svg" alt="hello" class="tagline">
+            <div class="taglineTxt">
+                <h2>Мы поможем тебе с созданием персонального сайта-мультиссылки всего за пару кликов!</h2>
+            </div>
+            <button class="promoBtn show_contact_page">СОЗДАТЬ СВОЙ ДИЗАЙН</button>
+            <div class="waitingWrapper">
+                <div class="waitingItem">
+                    <img src="img/startPageImg/Vector.png" alt="vector" class="waitingImg">
+                    <div class="waitingDescr">Вы сможете разместить все ваши контакты на одной странице</div>
+                </div>
+                <div class="vl"></div>
+                <div class="waitingItem">
+                    <img src="img/startPageImg/stopwatch.png" alt="stopwatch" class="waitingImg">
+                    <div class="waitingDescr">С помощью нашего сайта вы создадите мультиссылку за пару минут!</div>
+                </div>
+                <div class="vl"></div>
+                <div class="waitingItem">
+                    <img src="img/startPageImg/smartphone.png" alt="smartphone" class="waitingImg">
+                    <div class="waitingDescr">Умные ссылки дают возможность вашим клиентам связаться с вами за один
+                        клик
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="contact_page" class="hide">
@@ -58,28 +254,28 @@
         <div class="right-side">
             <h2>Ссылки на Ваши соцсети</h2>
             <p>
-              <i class="fab fa-instagram"></i>
-                <input id="instagram" placeholder="Введите никнейм без @" ></p>
+                <i class="fab fa-instagram"></i>
+                <input id="instagram" placeholder="Введите никнейм без @"></p>
             <p>
-              <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-facebook-square"></i>
                 <input id="facebook" placeholder="Введите id пользователя"></p>
             <p>
             <p>
-              <i class="fab fa-twitter"></i>
+                <i class="fab fa-twitter"></i>
                 <input id="twitter" placeholder="Введите никнейм без @"></p>
             <p>
-              <i class="fab fa-telegram"></i>
-                <input id="telegram" placeholder="Введите никнейм без @" ></p>
+                <i class="fab fa-telegram"></i>
+                <input id="telegram" placeholder="Введите никнейм без @"></p>
             <p>
-              <i class="fab fa-github"></i>
+                <i class="fab fa-github"></i>
                 <input id="github" placeholder="Введите никнейм"></p>
             <p>
             <p>
-              <i class="fab fa-viber"></i>
+                <i class="fab fa-viber"></i>
                 <input type="tel" id="viber" placeholder="Введите +380...."></p>
             <p>
             <p>
-              <i class="fab fa-youtube"></i>
+                <i class="fab fa-youtube"></i>
                 <input id="youtube" placeholder="Введите полную ссылку"></p>
             <p class="button-center">
                 <input type="reset" value="Очистить">
@@ -93,7 +289,8 @@
 <div id="preview" class="hide">
     <div id="navigation_tmpl1">
         <button type="button" class="show_contact_page">back to contact</button>
-        <button type="button" id="download">download</button>
+<!--        <button type="button" id="download">download</button>-->
+        <a download="card.html" id="download" href="">download</a>
     </div>
     <div class="main" id="card">
         <div id="photo_container"></div>
@@ -103,31 +300,7 @@
                 <div id="description">
                     <span id="status_container"></span>
                     <div id="links">
-                        <a href="https://www.facebook.com/profile.php?id=100022150695155">
-                            <div id="link1">
-                                <span>github</span>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div id="link2">
-                                <span>youtube</span>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div id="link3">
-                                <span>instagram</span>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div id="link4">
-                                <span>linkedin</span>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div id="link5">
-                                <span>twitter</span>
-                            </div>
-                        </a>
+                        <a><div><span></span></div></a>
                     </div>
                 </div>
             </div>
