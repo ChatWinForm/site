@@ -1,7 +1,8 @@
 #navigation_tmpl1 {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: center;
+    align-items: center;
 }
 
 #navigation_tmpl1 button {
@@ -10,11 +11,6 @@
     height: 40px;
     border-radius: 30px;
     border-style: none;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-#navigation_tmpl1 img{
-  width: 15%;
 }
 
 .main {
@@ -60,7 +56,7 @@
     margin-top: 10%;
     border: 1px solid #933B00;
     padding: 5% 0% 5% 0%;
-    width: 200%;
+    width: 70%;
     border-radius: 46px;
     text-decoration: none;
     color: inherit;
@@ -73,7 +69,7 @@
 }
 
 #links {
-    width: 200%;
+    width: 100%;
     margin-bottom: 10%;
     color: #933B00;
 }
@@ -105,7 +101,7 @@
     }
 
     #avatardiv {
-        width: 80%;
+        width: 50%;
         padding-bottom: 5%;
     }
 }
@@ -131,7 +127,7 @@
     }
 
     #avatardiv {
-        width: 75%;
+        width: 40%;
         padding-bottom: 5%;
     }
 }
@@ -160,7 +156,7 @@
     }
 
     #avatardiv {
-        width: 100%;
+        width: 30%;
         padding-bottom: 5%;
     }
 }
@@ -191,7 +187,7 @@
     }
 
     #avatardiv {
-        width: 60%;
+        width: 7%;
         padding-bottom: 2%;
     }
 }
